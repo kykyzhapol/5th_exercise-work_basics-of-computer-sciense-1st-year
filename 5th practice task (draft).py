@@ -1,4 +1,4 @@
-'''
+
 #1st
 year = int(input())
 if year%4 != 0:
@@ -7,9 +7,9 @@ else:
     print(366)
 
 
-#2nd
-import turtle as t
 import math as m
+# 2nd
+import turtle as t
 
 
 def cle(xc, yc, r):
@@ -110,7 +110,7 @@ if fst_var>N//2:
     print(N-fst_var)
 else:
     print(fst_var)
-'''
+
 #8th
 kn = int(input())
 gln = kn//(17*29)
@@ -124,3 +124,43 @@ elif skl == 0:
     print(f'{gln} галеон,\n{kn} кнатов')
 else:
     print(f'{gln} галеон,\n{skl} сикелей,\n{kn} кнатов')
+
+#9th
+hight = list(map(int, input().split()))
+print(hight)
+
+for i in range(0, 3):
+    if max(hight) == hight[i]:
+        ix_max = i
+
+for i in range(0, 3):
+    if min(hight) == hight[i]:
+        ix_min = i
+
+for i in range(0,3):
+    if i != ix_min and i!= ix_max:
+        ix_mid = i
+print(hight[ix_min], hight[ix_mid], hight[ix_max])
+
+#10th
+pin = input()
+error_count = 0
+if len(pin)>4:
+    error_count+=1
+
+match_l = 0
+for i in pin:
+    for k in pin:
+        if k == i:
+            match_l +=1
+if match_l >4:
+    error_count+=1
+
+for i in range(1900, 2051):
+    if i == int(pin):
+        error_count+=1
+
+if error_count != 0:
+    print('ERROR')
+else:
+    print('OK')
