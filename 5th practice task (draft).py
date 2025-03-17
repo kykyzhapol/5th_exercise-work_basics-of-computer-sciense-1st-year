@@ -160,6 +160,13 @@ for i in range(1900, 2051):
     if i == int(pin):
         error_count+=1
 
+if int(pin[0]) == int(pin[1])+1 == int(pin[2])+2 == int(pin[3])+3:
+    error_count +=1
+
+if int(pin[0]) == int(pin[1])-1 == int(pin[2])-2 == int(pin[3])-3:
+    error_count +=1
+
+
 if error_count != 0:
     print('ERROR')
 else:
