@@ -1,10 +1,12 @@
 
 #1st
 year = int(input())
-if year%4 != 0:
-    print(365)
-else:
+if year%4 == 0:
     print(366)
+elif year%400 == 0:
+    print(366)
+else:
+    print(365)
 
 
 import math as m
